@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cName"
+            android:hint="Class Name"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/ic_c_class"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ic_c_class"
+            android:layout_alignTop="@+id/cName"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_action_labels" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ic_c_teacher"
+            android:layout_below="@+id/ic_c_class"
+            android:layout_toStartOf="@+id/cName"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_action_person" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/cTeacher"
+            android:layout_alignBottom="@+id/ic_c_teacher"
+            android:layout_alignStart="@+id/cName"
+            android:hint="Teacher Name"
+            android:layout_alignEnd="@+id/cName" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView2"
+            android:layout_below="@+id/ic_c_teacher"
+            android:layout_alignStart="@+id/ic_c_teacher"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_action_place" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cLocation"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_alignStart="@+id/cTeacher"
+            android:hint="Location"
+            android:layout_alignEnd="@+id/cTeacher" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke">
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/PrimaryBlue"
+        tools:targetApi="21"
+        android:titleTextAppearance="@color/white">
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/aName"
+                android:hint="Assignment Name"
+                android:layout_below="@+id/class_spinner"
+                android:layout_alignStart="@+id/class_spinner" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/aDescription"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:id="@+id/textView2"
+                android:textSize="20sp"
+                android:textColor="@color/Black"
+                android:layout_below="@+id/alert_spinner"
+                android:layout_alignStart="@+id/alert_spinner" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/ic_a_time"
+                android:layout_below="@+id/aName"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_action_time"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/dateText"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/ic_a_time"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/ic_a_bell" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Repeat"
+                android:id="@+id/btn_repeat"
+                android:layout_marginLeft="10dp"
+                android:layout_alignBottom="@+id/ic_a_time"
+                android:layout_alignStart="@+id/dateText"
+                android:layout_marginBottom="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/Black" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_repeat"
+                android:checked="false"
+                android:layout_alignBottom="@+id/btn_repeat"
+                android:layout_alignEnd="@+id/dateText"
+                android:layout_marginEnd="46dp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/ic_a_bell"
+                android:src="@drawable/ic_action_alarms"
+                android:layout_below="@+id/dateText"
+                android:layout_alignStart="@+id/ic_a_time" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/alert_spinner"
+                android:layout_alignTop="@+id/ic_a_bell"
+                android:spinnerMode="dialog"
+                android:layout_alignStart="@+id/btn_repeat" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/ic_a_note"
+                android:src="@drawable/ic_action_edit"
+                android:layout_below="@+id/alert_spinner"
+                android:layout_alignStart="@+id/ic_a_bell" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Class"
+                android:id="@+id/textView4"
+                android:textSize="20sp"
+                android:textColor="@color/Black"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/btn_repeat"
+                android:layout_marginTop="20dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/class_spinner"
+                android:layout_below="@+id/textView4"
+                android:layout_alignStart="@+id/textView4"
+                android:spinnerMode="dialog" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/ic_action_view_as_list"
+                android:layout_alignTop="@+id/textView4"
+                android:layout_toStartOf="@+id/btn_repeat" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
